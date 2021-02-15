@@ -1,0 +1,94 @@
+body {
+  /*
+  Sets so we don't have footer issue
+  */
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+
+#text-2 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 15px;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  padding-left: 20px; 
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #f2f2f2;
+  border-top: 1px solid #dadce0;
+  width: 100%;
+  height: 40px;
+  margin-top: 130px; }
+
+#list-1 {
+  text-align: right;
+  list-style-type: none; }
+  #list-1 .li-elem {
+    display: inline-block;
+    margin-right: 15px; }
+
+.ah {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 13px;
+  font-family: arial, sans-serif; }
+
+.ah:hover {
+  text-decoration: underline; }
+
+#btn-3 {
+  background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+  border: 1px solid #4285f4;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6.5px 12.5px 6.5px 12.5px;
+  border-radius: 2px;
+  outline: none !important; }
+
+form {
+  text-align: center; }
+  form #logo {
+    width: 50; }
+  form #btnsubmit, form #btnsubmit-2 {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+    padding: 8px 8px 8px 8px;
+    margin-right: 10px; }
+  form #btnsubmit:hover, form #btnsubmit-2:hover {
+    border: 0.5px solid #D0D0D0;
+    border-radius: 3.5px; }
+  form #btnsubmit:focus, form #btnsubmit-2:focus {
+    outline: none !important;
+    border: 1.2px solid;
+    border-color: blue;
+    border-radius: 2px; }
+  form #btnsubmit-2 {
+    margin-right: 40px; }
+  form #div-1 {
+    text-align: center;
+    margin-top: 150px; }
+  form #div-1 > #searchbox {
+    background-image: url("https://i.ibb.co/D9Vpy3S/img.png");
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: left 8px top 10.8px;
+    border: 0.5px solid #D0D0D0;
+    border-radius: 24px;
+    height: 40px;
+    width: 570px;
+    text-indent: 50px; }
+  form #searchbox:hover {
+    box-shadow: 0 0.1px 5px #bbbbc3; }
+  form #searchbox:focus {
+    outline: none !important;
+    box-shadow: 0 0.1px 5px #bbbbc3; }
+
+/*# sourceMappingURL=style.css.map */
