@@ -1,0 +1,15 @@
+body{
+    margin:0;
+    padding:0;
+}
+#header{
+    position:absolute;
+    top:0;
+    background-color: #f1f1f1;
+    width:100%;
+    height:calc(9vh + 9px);
+    background-image: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+    background-repeat: no-repeat;
+    background-size:90px 30.5px;
+    background-position: 17px 18px;
+}
