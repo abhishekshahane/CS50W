@@ -54,4 +54,11 @@ body {
   font-family: arial, sans-serif;
   font-size: 20px; }
 
+#border-bottom {
+  position: absolute;
+  top: 132px;
+  border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  height: 1px; }
+
 /*# sourceMappingURL=advanced.css.map */
