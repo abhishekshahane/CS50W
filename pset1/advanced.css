@@ -7,10 +7,40 @@ body {
   top: 0;
   background-color: #f1f1f1;
   width: 100%;
-  height: calc(7.3vh + 9px);
+  height: 60px;
   background-image: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
   background-repeat: no-repeat;
   background-size: 90px 30.5px;
-  background-position: calc(2vh + 3.5px) calc(2vh + 3.5px); }
+  background-position: 15px 18px; }
+
+#list-elems {
+  float: right;
+  list-style-type: none; }
+
+#btn-3 {
+  background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+  border: 1px solid #4285f4;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6.5px 12.5px 6.5px 12.5px;
+  border-radius: 2px;
+  outline: none !important; }
+
+#btn-li {
+  padding-left: 60px;
+  padding-right: 30px;
+  margin-top: -28px; }
+
+#search-back {
+  padding-right: 120px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  line-height: 24px; }
+
+#search-back:hover {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=advanced.css.map */
