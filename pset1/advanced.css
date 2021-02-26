@@ -61,4 +61,39 @@ body {
   width: 100%;
   height: 1px; }
 
+#content {
+  position: absolute;
+  top: 133px;
+  width: 100%; }
+
+#a-header-1 {
+  color: #333;
+  font-size: 16px;
+  font-family: arial,sans-serif;
+  float: left;
+  margin-left: 45px;
+  margin-top: 46px; }
+
+#b-header-1 {
+  color: #777;
+  font-size: 13px;
+  font-weight: 700;
+  float: left;
+  font-family: arial,sans-serif;
+  margin-left: 632px;
+  margin-top: 48px; }
+
+#a-list {
+  position: absolute;
+  list-style-type: none;
+  float: left;
+  top: 70px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-family: arial,sans-serif;
+  margin-left: 5px; }
+
+.next {
+  margin-top: 27px; }
+
 /*# sourceMappingURL=advanced.css.map */
