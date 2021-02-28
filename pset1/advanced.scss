@@ -12,6 +12,9 @@ html,body
     background-color: #f1f1f1;
     width:100%;
     height:60px;
+    /*
+    logo info
+    */
     background-image: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
     background-repeat: no-repeat;
     background-size:90px 30.5px;
@@ -80,13 +83,21 @@ html,body
     margin-top:46px;
 }
 #c-header-1{
+    /*
+    Style attributes
+    */
     color:#777;
     font-size:13px;
     font-weight:700;
-    float:right;
     font-family:arial,sans-serif;
-    margin-left:632px;
-    margin-top:32px;
+    /*
+    positioning
+    */
+    display: block;
+    position:absolute;
+    left:800px;
+    top:50px;
+
 }
 #a-list{
     position:absolute;
@@ -123,3 +134,11 @@ html,body
     outline: none !important;
     border:0.6px solid rgba(0, 89, 255, 0.774);
 }   
+#to{
+    font-size: 13px;
+    color:#202124;
+    font-family: arial,sans-serif;
+    position: absolute;
+    left:504px;
+    top:257px;
+}
