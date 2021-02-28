@@ -19,28 +19,34 @@
             <div id="text-1">Advanced Search</div>
         </div>
         <div id="border-bottom"></div>
-        <div id="content">
-            <p id="a-header-1">Find pages with...</p>
-            <ol id="a-list">
-                <li>all these words:</li>
-                <li class="next">this exact word or phrase:</li>
-                <li class="next">any of these words:</li>
-                <li class="next">none of these words:</li>
-                <li class="next">numbers ranging from:</li>
-            </ol>
-            <ol id="b-list">
-                <input type="text" class="wide-input" >
-                <input type="text" class="wide-input">
-                <input type="text" class="wide-input">
-                <input type="text" class="wide-input">
-                <input type="text" class="wide-input" style="width:250px;display: inline;">
-                <input type="text" class="wide-input"  style="width:250px; display: inline;position: absolute;left:538px;top:250px;">
-            </ol>
-            <span id="to">to</span>
-            <span id="c-header-1">To do this in the search box.</span>
-            <ol id="c-list">
-                <p class="c-list-section">Type the important words: <span class="code-monospace">tri-colour rat terrier</span></p>
-            </ol>
-        </div>
+        <form>
+            <div id="content">
+                <p id="a-header-1">Find pages with...</p>
+                <ol id="a-list">
+                    <li>all these words:</li>
+                    <li class="next">this exact word or phrase:</li>
+                    <li class="next">any of these words:</li>
+                    <li class="next">none of these words:</li>
+                    <li class="next">numbers ranging from:</li>
+                </ol>
+                <ol id="b-list">
+                    <input type="text" class="wide-input" >
+                    <input type="text" class="wide-input">
+                    <input type="text" class="wide-input">
+                    <input type="text" class="wide-input">
+                    <input type="text" class="wide-input" style="width:250px;display: inline;">
+                    <input type="text" class="wide-input"  style="width:250px; display: inline;position: absolute;left:538px;top:250px;">
+                </ol>
+                <span id="to">to</span>
+                <span id="c-header-1">To do this in the search box.</span>
+                <ol id="c-list">
+                    <p class="c-list-section">Type the important words: <span class="code-monospace">tri-colour rat terrier</span></p>
+                    <p class="c-list-section">Put exact words in quotes: <span class="code-monospace">"rat terrier"</span></p>
+                    <p class="c-list-section">Type <span class="code-monospace">OR</span> between all the words you want: <span class="code-monospace">miniature OR standard</span></p>
+                    <p class="c-list-section">Put a minus sign just before words that you don't want: <br><span class="code-monospace">-rodent, -"Jack Russell"</span></p>
+                    <p class="c-list-section">Put two full stops between the numbers and add a unit of measurement: <br><span class="code-monospace">10..35 kg, £300..£500, 2010..2011</span></p>
+                </ol>
+            </div>
+        </form>
     </body>
 </html>

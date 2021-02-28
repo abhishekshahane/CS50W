@@ -156,3 +156,10 @@ html,body
 .code-monospace{
     font-family: monospace;
 }
+@for $j from 2 through 6{
+    .c-list-section:nth-child(#{$j}){
+        white-space: nowrap;
+        position: absolute;
+        top: calc(-34px + (#{$j} * 39px))
+    }
+}
