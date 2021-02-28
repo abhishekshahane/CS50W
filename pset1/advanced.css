@@ -1,45 +1,163 @@
-/*
-Error: Invalid CSS after "@for ": expected "$", was "2 through 5{}"
-        on line 159 of advanced.scss
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
 
-154:     color: #555;
-155: }
-156: .code-monospace{
-157:     font-family: monospace;
-158: }
-159: @for 2 through 5{}
+#header {
+  position: absolute;
+  top: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 60px;
+  /*
+  logo info
+  */
+  background-image: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+  background-repeat: no-repeat;
+  background-size: 90px 30.5px;
+  background-position: 15px 18px; }
 
-Backtrace:
-advanced.scss:159
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:288:in `for_directive'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:234:in `special_directive'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:209:in `directive'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"@for \": expected \"$\", was \"2 through 5{}\"\A         on line 159 of advanced.scss\A \A 154:     color: #555;\A 155: }\A 156: .code-monospace{\A 157:     font-family: monospace;\A 158: }\A 159: @for 2 through 5{}"; }
+#list-elems {
+  float: right;
+  list-style-type: none; }
+
+#btn-3 {
+  background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+  border: 1px solid #4285f4;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6.5px 12.5px 6.5px 12.5px;
+  border-radius: 2px;
+  outline: none !important; }
+
+#btn-li {
+  padding-left: 60px;
+  padding-right: 30px;
+  margin-top: -28px; }
+
+#search-back {
+  padding-right: 120px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  line-height: 24px; }
+
+#search-back:hover {
+  text-decoration: underline; }
+
+#below {
+  position: absolute;
+  height: 60px;
+  top: 85px;
+  padding-left: 45px; }
+
+#text-1 {
+  color: #d93025;
+  font-family: arial, sans-serif;
+  font-size: 20px; }
+
+#border-bottom {
+  position: absolute;
+  top: 132px;
+  border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  height: 1px; }
+
+#content {
+  position: absolute;
+  top: 133px;
+  width: 100%; }
+
+#a-header-1 {
+  color: #333;
+  font-size: 16px;
+  font-family: arial,sans-serif;
+  float: left;
+  margin-left: 45px;
+  margin-top: 46px; }
+
+#c-header-1 {
+  /*
+  Style attributes
+  */
+  color: #777;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: arial,sans-serif;
+  /*
+  positioning
+  */
+  display: block;
+  position: absolute;
+  left: 800px;
+  top: 50px; }
+
+#a-list {
+  position: absolute;
+  list-style-type: none;
+  float: left;
+  top: 70px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-family: arial,sans-serif;
+  margin-left: 5px; }
+
+.next {
+  margin-top: 27px; }
+
+#b-list {
+  text-align: center; }
+
+.wide-input {
+  text-indent: 5px;
+  outline: none !important;
+  border: 1px solid #d9d9d9;
+  position: absolute;
+  height: 25px;
+  top: 83px;
+  width: 560px;
+  left: 228px; }
+
+.wide-input:nth-child(2) {
+  margin-top: calc((40px * 1) + 4px); }
+
+.wide-input:nth-child(3) {
+  margin-top: calc((40px * 2) + 5px); }
+
+.wide-input:nth-child(4) {
+  margin-top: calc((40px * 3) + 6px); }
+
+.wide-input:nth-child(5) {
+  margin-top: calc((40px * 4) + 7px); }
+
+.wide-input:focus {
+  outline: none !important;
+  border: 0.6px solid rgba(0, 89, 255, 0.774); }
+
+#to {
+  font-size: 13px;
+  color: #202124;
+  font-family: arial,sans-serif;
+  position: absolute;
+  left: 504px;
+  top: 257px; }
+
+#c-list {
+  position: absolute;
+  left: 770px;
+  top: 65px; }
+
+.c-list-section {
+  font-size: 11px;
+  color: black;
+  font-family: arial,sans-serif;
+  color: #555; }
+
+.code-monospace {
+  font-family: monospace; }
+
+/*# sourceMappingURL=advanced.css.map */
