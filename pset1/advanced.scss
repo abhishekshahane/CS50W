@@ -163,3 +163,18 @@ html,body
         top: calc(-34px + (#{$j} * 39px))
     }
 }
+#btn-4{
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    border: 1px solid #4285f4;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 6.5px 12.5px 6.5px 12.5px;
+    border-radius: 2px;
+    outline: none !important;
+    position: absolute;
+    top:300px;
+}
+#centered{
+    text-align: center;
+}
