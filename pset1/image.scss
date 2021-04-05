@@ -76,16 +76,6 @@ form{
         border-color: blue;
         border-radius: 2px;
     }
-    #btnsubmit-2{
-        margin-right: 40px;
-        @extend #btnsubmit;
-    } 
-    #btnsubmit-2:hover{
-        @extend #btnsubmit:hover;
-    }
-    #btnsubmit-2:focus{
-        @extend #btnsubmit:focus;
-    }
     #div-1{
         text-align: center;
         margin-top: 150px;

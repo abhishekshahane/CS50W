@@ -53,7 +53,7 @@ form {
   text-align: center; }
   form #logo {
     width: 50; }
-  form #btnsubmit, form #btnsubmit-2 {
+  form #btnsubmit {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     font-family: arial, sans-serif;
@@ -61,16 +61,14 @@ form {
     color: #3c4043;
     padding: 8px 8px 8px 8px;
     margin-right: 10px; }
-  form #btnsubmit:hover, form #btnsubmit-2:hover {
+  form #btnsubmit:hover {
     border: 0.5px solid #D0D0D0;
     border-radius: 3.5px; }
-  form #btnsubmit:focus, form #btnsubmit-2:focus {
+  form #btnsubmit:focus {
     outline: none !important;
     border: 1.2px solid;
     border-color: blue;
     border-radius: 2px; }
-  form #btnsubmit-2 {
-    margin-right: 40px; }
   form #div-1 {
     text-align: center;
     margin-top: 150px; }
