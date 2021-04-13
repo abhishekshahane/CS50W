@@ -1,0 +1,3 @@
+*JavaScript is a cool language*
+
+_It is used for many things_

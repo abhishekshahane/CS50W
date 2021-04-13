@@ -1,0 +1,1 @@
+__PHP is really cool.__

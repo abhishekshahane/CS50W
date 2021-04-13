@@ -2,15 +2,17 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from markdown2 import Markdown
+from django import forms
 
 from . import util
 from random import choice
 
-
+class CreateForm(forms.Form):
+    title = forms.CharField(label='', widget=forms.TextInput(attrs={'id': 'title'}))
+    textarea = forms.CharField(widget=forms.Textarea(attrs={'cols': '10'}),  label='')
 def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
-
     })
 def content(request, title):
     if util.get_entry(title)==None:
@@ -44,7 +46,27 @@ def search(request):
     return render(request, "encyclopedia/search.html",{
         "f":f
     })
-    
-    
+def create(request):
+    if request.method=="POST":
+        form = CreateForm(request.POST)
+        if form.is_valid():
+            title = form.cleaned_data["title"]
+            content = form.cleaned_data["textarea"]
+            if title not in util.list_entries():
+                util.save_entry(title, content)
+                return HttpResponseRedirect(reverse("encyclopedia:page", args=[title]))
+            else:
+                return render(request, "encyclopedia/create.html",{
+                "form":form,
+                "title_exists":True
+            })
+        else:
+            return render(request, "encyclopedia/create.html",{
+                "form":form
+            })
+    else:
+        return render(request, "encyclopedia/create.html",{
+            "form": CreateForm()
+        })
 
         

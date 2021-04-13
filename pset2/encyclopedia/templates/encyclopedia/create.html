@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Create a Page!
+{% endblock %}
+{% block body %}
+    <h4 style="margin-top:5px;">Create a Page!</h4>
+    {% if title_exists %}
+        <p style="margin-top:12px;color:red;font-style: italic;">Title already exists!</p>
+    {% endif %}
+    <form action="{% url 'encyclopedia:create' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <br>
+        <input type="submit" value="Create It!">
+    </form>
+{% endblock %}
