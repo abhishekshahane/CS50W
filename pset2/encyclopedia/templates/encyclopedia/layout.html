@@ -12,8 +12,8 @@
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
                 <h2>Wiki</h2>
-                <form>
-                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                <form action="/search">
+                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia" value="{{ encyclopedia.search }}">
                 </form>
                 <div>
                     <a href="{% url 'encyclopedia:index' %}">Home</a>
