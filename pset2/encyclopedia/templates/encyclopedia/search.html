@@ -3,8 +3,9 @@
     Search 
 {% endblock %}
 {% block body %}
+    <p style="color:gray; font-style: italic;font-size:15px;padding:10px;text-align: left;">Found {{ number }} {{ result }}.</p>
     <ul>
-        {% for entry in f %}
+        {% for entry in f %}    
             <li><a href="{% url 'encyclopedia:page' entry %}">{{ entry }}</a></li>
         {% empty %}
             <li>Hmm, looks like that didn't bring up any great matches. Did you make a typo?</li>

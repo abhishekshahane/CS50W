@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Edit - Wiki
+{% endblock %}
+{% block body %}
+    <h4 style="margin-top:5px;">Edit a Page!</h4>
+    {% if title_exists %}
+        <p style="margin-top:12px;color:red;font-style: italic;">Title already exists!</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <br>
+        <input type="submit" value="Edit It!">
+    </form>
+{% endblock %}

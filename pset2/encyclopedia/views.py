@@ -43,8 +43,14 @@ def search(request):
     for each in li:
         if q.lower() in each.lower():
             f+=[each]
+    if len(f)==1:
+        result = "result"
+    else:
+        result="results"
     return render(request, "encyclopedia/search.html",{
-        "f":f
+        "f":f,
+        "number": len(f),
+        "result": result
     })
 def create(request):
     if request.method=="POST":
@@ -68,5 +74,16 @@ def create(request):
         return render(request, "encyclopedia/create.html",{
             "form": CreateForm()
         })
+def edit(request, title):
+    if util.get_entry(title)==None:
+        return render(request, "encyclopedia/404.html", {
+            "name":title
+        })
+    else:
+        return render(request, "encyclopedia/edit.html", {
+            "form": CreateForm()
+        })
+    
+    
 
         

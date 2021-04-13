@@ -4,4 +4,8 @@
     {% endblock %}
     {% block body %}
         {{ content|safe }}
+        <br>
+        <br>
+        <a href="{% url 'encyclopedia:edit' title %}"><input type="button" value="Edit"></a>
+
     {% endblock %}
