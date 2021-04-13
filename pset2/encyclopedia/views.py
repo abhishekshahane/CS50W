@@ -10,14 +10,20 @@ from random import choice
 class CreateForm(forms.Form):
     title = forms.CharField(label='', widget=forms.TextInput(attrs={'id': 'title'}))
     textarea = forms.CharField(widget=forms.Textarea(attrs={'cols': '10'}),  label='')
+
+class EditForms(forms.Form):
+    textarea = forms.CharField(widget=forms.Textarea(attrs={'cols': '10'}),  label='')
+
 def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
+
 def content(request, title):
     if util.get_entry(title)==None:
         return render(request, "encyclopedia/404.html", {
-            "name":title
+            "name":title,
+             "word": "find"
         })
     a = util.get_entry(title)
     converter = Markdown()
@@ -27,11 +33,13 @@ def content(request, title):
         "title": title,
         "content": html
     })
+
 def random(request):
     li = util.list_entries()
     f = choice(li)
     print(f)
     return HttpResponseRedirect(f'/wiki/{f}')
+
 def search(request):
     q = request.GET.get('q')
     li = util.list_entries()
@@ -52,6 +60,7 @@ def search(request):
         "number": len(f),
         "result": result
     })
+
 def create(request):
     if request.method=="POST":
         form = CreateForm(request.POST)
@@ -74,16 +83,24 @@ def create(request):
         return render(request, "encyclopedia/create.html",{
             "form": CreateForm()
         })
+
 def edit(request, title):
     if util.get_entry(title)==None:
         return render(request, "encyclopedia/404.html", {
-            "name":title
+            "name":title,
+            "word": "edit"
         })
     else:
+        if request.method=="POST":
+            form = EditForms(request.POST)
+            if form.is_valid():
+                # If the form is valid, then we will get the cleaned_data and update the entry
+                content = form.cleaned_data["textarea"]
+                util.save_entry(title, content)
+                return HttpResponseRedirect(reverse("encyclopedia:page", args=[title]))
+        content = util.get_entry(title)
+        data = {'title': title, 'textarea': content}
         return render(request, "encyclopedia/edit.html", {
-            "form": CreateForm()
+            "form": EditForms(data),
+            "title": title
         })
-    
-    
-
-        

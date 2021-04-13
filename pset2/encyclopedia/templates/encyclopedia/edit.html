@@ -4,10 +4,8 @@
 {% endblock %}
 {% block body %}
     <h4 style="margin-top:5px;">Edit a Page!</h4>
-    {% if title_exists %}
-        <p style="margin-top:12px;color:red;font-style: italic;">Title already exists!</p>
-    {% endif %}
-    <form method="post">
+    <input type="text" value={{ title }} disabled>
+    <form method="post" action="{% url 'encyclopedia:edit' title %}">
         {% csrf_token %}
         {{ form }}
         <br>
