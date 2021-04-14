@@ -43,9 +43,10 @@ def random(request):
 def search(request):
     q = request.GET.get('q')
     li = util.list_entries()
+    d = [each.lower() for each in li]
     f = []
     # We redirect user to the page immediately, if the entry matches a page 
-    if q in li:
+    if q.lower() in d:
         return HttpResponseRedirect(reverse('encyclopedia:page', args=[q]))
     # It might be a substring - Even if it isn't, {% empty %} handles that
     for each in li:
