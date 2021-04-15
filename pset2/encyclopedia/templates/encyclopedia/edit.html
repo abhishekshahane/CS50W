@@ -4,7 +4,7 @@
 {% endblock %}
 {% block body %}
     <h4 style="margin-top:5px;">Edit a Page!</h4>
-    <input type="text" value={{ title }} disabled>
+    <input type="text" value="{{ title }}" disabled>
     <form method="post" action="{% url 'encyclopedia:edit' title %}">
         {% csrf_token %}
         {{ form }}
