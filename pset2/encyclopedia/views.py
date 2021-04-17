@@ -69,12 +69,10 @@ def search(request):
     # GETting the request
     q = request.GET.get('q').strip()
     li = util.list_entries()
-    # Converting list entries into lowercase
-    d = [each.lower() for each in li]
     f = []
 
     # We redirect user to the page immediately, if the entry matches a page 
-    if q.lower() in d:
+    if q in li:
         return HttpResponseRedirect(reverse('encyclopedia:page', args=[q]))
     # It might be a substring - Even if it isn't, {% empty %} handles that
 
@@ -111,7 +109,7 @@ def create(request):
 
             # Saving the entry 
         
-            if title not in util.list_entries():
+            if title.lower() not in [each.lower() for each in util.list_entries()]:
                 util.save_entry(title, content)
                 return HttpResponseRedirect(reverse("encyclopedia:page", args=[title]))
 

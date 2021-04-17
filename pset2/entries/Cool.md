@@ -1,2 +1,3 @@
 ## Cool
-NICE!
+
+Cool.
