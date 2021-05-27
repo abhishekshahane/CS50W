@@ -9,4 +9,4 @@ Project 1: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset1">
 Project 2: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset2">Code</a> | <a href="#">Video(Coming soon!)</a>
 <br>
 <br>
-Project 3: Coming soon(will shift code to my main repository on receival of grade). 
+Project 3: Coming soon(will shift code here on receival of grade). 
