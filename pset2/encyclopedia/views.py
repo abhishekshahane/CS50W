@@ -122,7 +122,7 @@ def create(request):
         else:
             return render(request, "encyclopedia/create.html",
             {
-                "form":form
+                "form": form
             })
     else:
         return render(request, "encyclopedia/create.html",

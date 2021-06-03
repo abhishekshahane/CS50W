@@ -1,0 +1,21 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+    <form method="POST" action="{% url 'create' %}">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name of Item" class="form-control" style="margin: auto !important;display: block;width: 60%;" required>
+        <br>
+        <input type="text" name="start" placeholder="Starting Bid" class="form-control" style="margin: auto !important;display: block;width: 60%;" required>
+        <br>
+        <input type="text" name="picture_url" placeholder="Picture URL" class="form-control" style="margin: auto !important;display: block;width: 60%;">
+        <br>
+        <select name="category" class="form-control" style="margin: auto !important;display: block;width: 60%;">
+            {% for choice in list1 %}
+                <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <textarea name="description" placeholder="Description" class="form-control" row="3" style="margin: auto !important;display: block;width: 60%;"></textarea>
+        <br>
+        <input type="submit" class="btn btn-primary mb-2" id="center">
+    </form>
+{% endblock %}

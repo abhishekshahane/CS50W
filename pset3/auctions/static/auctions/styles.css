@@ -1,0 +1,9 @@
+body {
+    padding: 10px;
+}
+
+#center
+{
+    margin-left: 20%;
+    display: block !important;
+}

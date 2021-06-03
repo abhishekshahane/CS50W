@@ -1,0 +1,89 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+    {% if not listing.is_active and request.user.username == listing.curr_highest_bidder %}
+        <div class="alert alert-info">
+            This auction listing has been closed by the owner, and you are the winner of the auction. 
+        </div>
+    {% endif %}
+    {% if err %}
+        <div class="alert alert-info alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{err}} 
+        </div>
+    {% endif %}
+    <h2>Listing: {{ listing.name }}</h2>
+    {% if b %}
+        <span class="badge badge-info">Watchlisted</span>
+        <br>
+    {% endif %}
+    {% if listing.picture_url %}
+        <img src="{{ listing.picture_url }}" style="width: 35%;height:35%;object-fit: contain;max-width: 40%;max-height:40%;">
+    {% else %}
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png" alt="Card image cap" style="width: 35%;height:35%;object-fit: contain;max-width: 40%;max-height:40%;">
+    {% endif %}
+    <br>
+    <br>
+    <h5 class="font-weight-normal">{{ listing.description }}</h5>
+    <br>
+    <p class="slate">{{ a }} bid(s) so far.</p>
+    <h3 class="font-weight-bold">${{ curr_price }}</h3>
+    <br>
+    {% if user.is_authenticated and listing.is_active %}
+        <form method="POST" action="{% url 'listing' listing.id %}">
+            {% csrf_token %}
+            <input type="text" name="bid" placeholder="Bid Amount" class="form-control" required>
+            <br>
+            <input type="submit" class="btn btn-primary mb-2" name="bid_POST">
+            <!--Gets us the user, who is bidding-->
+            <input type="hidden" name="user" value="{{ request.user.username }}">
+        </form>
+        <br>
+    {% endif %}
+    {% if b and user.is_authenticated and listing.is_active %}
+        <form method="POST" action="{% url 'watchlist' %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ listing.id }}" name="id">
+            <input type="submit" name="unwatch" value="Unwatch" class="btn btn-outline-danger">
+        </form>
+        <br>
+    {% elif user.is_authenticated and listing.is_active %}
+        <form method="POST" action="{% url 'watchlist' %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ listing.id }}" name="id">
+            <input type="submit" name="watch" value="Watchlist!" class="btn btn-outline-success">
+        </form>
+        <br>
+    {% endif %}
+    <h5>Details</h5>
+    <ul>
+        <li>Listed by: {{ listing.owner }}</li>
+        <li>Category: {{ category }}</li>
+    </ul>
+    <br>
+    {% if user.username == listing.owner and listing.is_active %}
+        <form method="GET">
+            <input type="hidden" name="close_listing" value="true">
+            <input type="submit" value="Close Auction Listing" class="btn btn-outline-danger">
+        </form>
+        <br>
+    {% endif %}
+    {% if user.is_authenticated and listing.is_active %}
+        <h3>Comment Here!</h3>
+        <br>
+        <form method="POST" action="{% url 'listing' listing.id %}">
+            {% csrf_token %}
+            <textarea rows="5" cols="80" placeholder="Write a comment!" name="comment_text"></textarea>
+            <br>
+            <input type="submit" name="comment" value="Comment!" class="btn btn-outline-success">
+            <input type="hidden" name="user_name" value="{{ request.user.username }}">
+        </form>
+    {% endif %}
+    <hr>
+    <h3>Comments</h3>
+    {% for comment in comments %}
+        <p>{{ comment }}</p>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+    <h2>Watchlist</h2>
+    <br>
+    {% for listing in listings %}
+        <div class="col-sm-3 mt-2">
+            <div class="card" style="width:18rem;text-align:center;">
+                <div class="card-body">
+                    {% if listing.picture_url %}
+                        <img class="card-img-top" src="{{ listing.picture_url }}" alt="Card image cap" style="width:70%;height:70%;">
+                    {% else %}
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png" alt="Card image cap" style="width:70%;height:70%;">
+                    {% endif %}
+                    <h5 class="card-title">{{ listing.name }}</h5>
+                    <p class="card-text">Price: {{ listing.starting_bid }}</p>
+                    {% if listing.description %}
+                        <p class="card-text">{{ listing.description }}</p>
+                    {% endif %}
+                    <button class="btn btn-primary mb-2" id="center"><a href="{% url 'listing' listing.id %}" style="color:white;">Visit listing page</a></button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    {% endfor %}
+{% endblock %}
