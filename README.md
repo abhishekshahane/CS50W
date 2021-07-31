@@ -9,7 +9,7 @@ Project 1: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset1">
 Project 2: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset2">Code</a> | <a href="#">Video(Coming soon!)</a>
 <br>
 <br>
-Project 3: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset3">Code</a> | <a href="#">Video(Coming soon!</a>
+Project 3: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset3">Code</a> | <a href="#">Video(Coming soon!)</a>
 <br>
 <br>
 Project 4: <a href="https://github.com/abhishekshahane/CS50W/tree/master/pset4">Code</a> | <a href="#">Video(Coming soon!)</a>
